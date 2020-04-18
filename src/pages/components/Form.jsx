@@ -34,11 +34,15 @@ const Button = styled.button`
   margin-left: 5%;
 `;
 
-export default function Form() {
+export default function Form(props) {
   return (
     <>
-      <IpsumForm>
-        <Input placeholder="3" />
+      <IpsumForm action="" onSubmit={props.ipsumGeneration}>
+        <Input
+          placeholder="3"
+          type="text"
+          onChange={props.handleIpsumGeneration}
+        />
         <Label>paragraphs</Label>
         <Button>Generate!</Button>
       </IpsumForm>
