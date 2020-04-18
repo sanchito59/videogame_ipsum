@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import PageTitle from "./components/PageTitle";
 import IpsumForm from "./components/Form";
+import Results from "./components/Results";
 
 const Page = styled.div`
   width: 100%;
@@ -10,15 +11,23 @@ const Page = styled.div`
 `;
 
 export default function Homepage(props) {
+  const {
+    handleIpsumGeneration,
+    ipsumGeneration,
+    paragraphNumber,
+    loremIpsum,
+  } = props;
+
   console.log("homepage props: ", props);
   return (
     <Page>
       <PageTitle>Video Game Ipsum</PageTitle>
       <IpsumForm
-        handleIpsumGeneration={props.handleIpsumGeneration}
-        ipsumGeneration={props.ipsumGeneration}
-        paragraphNumber={props.paragraphNumber}
+        handleIpsumGeneration={handleIpsumGeneration}
+        ipsumGeneration={ipsumGeneration}
+        paragraphNumber={paragraphNumber}
       />
+      <Results loremIpsum={loremIpsum} />
     </Page>
   );
 }
