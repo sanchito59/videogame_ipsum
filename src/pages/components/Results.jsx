@@ -1,5 +1,7 @@
 import React from "react";
+import ClipboardJS from "clipboard";
 import styled from "styled-components";
+import Button from "./../components/Button";
 
 const ResultsContainer = styled.div`
   background-color: rgb(110, 127, 128);
@@ -22,6 +24,8 @@ const ResultsParagraph = styled.p`
   color: white;
 `;
 
+new ClipboardJS("#copy");
+
 export default function Results(props) {
   const { loremIpsum } = props;
   console.log(typeof loremIpsum);
@@ -29,8 +33,15 @@ export default function Results(props) {
   return (
     <>
       <ResultsContainer>
+        <Button id="copy" data-clipboard-target="#results">
+          Copy
+        </Button>
         {loremIpsum.map((paragraph, i) => {
-          return <ResultsParagraph key={i}>{paragraph}</ResultsParagraph>;
+          return (
+            <ResultsParagraph key={i} id="results">
+              {paragraph}
+            </ResultsParagraph>
+          );
         })}
       </ResultsContainer>
       ;
