@@ -6,7 +6,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      paragraphNumber: '1',
+      paragraphNumber: 1,
       loremIpsum: 'pizza',
       sampleIpsum: ["1-Up",
         "A",
@@ -209,36 +209,51 @@ class App extends React.Component {
     )
   }
 
-  sentence = function (sentence, wordsPerSentence, loremParagraph, shuffledIpsum) {
+  sentence = function (sentence, wordsPerSentence, shuffledIpsum) {
     for (let i = 0; i < wordsPerSentence; i++) {
       console.log('wordsPerSentence loop: ', i)
-      loremParagraph.push(shuffledIpsum[i]);
+      sentence.push(shuffledIpsum[i]);
       shuffledIpsum.shift();
     }
+    return sentence;
   }
 
   ipsumGeneration(e) {
     e.preventDefault();
     const paragraphs = this.state.paragraphNumber;
     let shuffledIpsum = this.shuffle(this.state.sampleIpsum.slice());
-    let wordsPerSentence = this.between(8, 15);
-    let sentencesPerParagraph = this.between(4, 6);
+    let wordsPerSentence = this.between(4, 10);
+    let sentencesPerParagraph = this.between(3, 6);
     let sentence = [];
     let loremParagraph = [];
-    for (let i = 0; i < paragraphs; i++) {
-      console.log('paragraph loop: ', i)
-      for (let i = 0; i < sentencesPerParagraph; i++) {
-        console.log('sentencesPerParagraph loop: ', i)
-        this.sentence(sentence, wordsPerSentence, loremParagraph, shuffledIpsum);
+    if (paragraphs > 7) {
+      return null;
+    } else {
+      let finalIpsum = [];
+      for (let i = 0; i < paragraphs; i++) {
+        console.log('paragraph loop: ', i)
+        for (let i = 0; i < sentencesPerParagraph; i++) {
+          this.sentence(sentence, wordsPerSentence, shuffledIpsum);
+          let lastWordInSentence = sentence.pop() + ".";
+          sentence.push(lastWordInSentence)
+          let processedSentence = sentence.join(' ');
+          sentence = [];
+          wordsPerSentence = this.between(8, 15);
+          sentencesPerParagraph = this.between(4, 6);
+          loremParagraph.push(processedSentence);
+          processedSentence = '';
+        }
+        loremParagraph.push('<br/>')
       }
-      wordsPerSentence = this.between(8, 15);
-      sentencesPerParagraph = this.between(4, 6);
+      finalIpsum.push(loremParagraph.join(' '))
+      finalIpsum = finalIpsum.join('')
+      finalIpsum = finalIpsum.split('<br/>')
+      // finalIpsum = finalIpsum.replace(/['"]+/g, '')
+      loremParagraph = [];
+      this.setState({
+        loremIpsum: finalIpsum
+      })
     }
-    let loremIpsumString = loremParagraph.join(' ');
-    console.log(loremIpsumString);
-    console.log(sentence);
-    let processedLoremIpsum = loremIpsumString.split(',').join(" ");
-    this.setState({ loremIpsum: processedLoremIpsum })
   }
 
   handleIpsumGeneration = e => {
@@ -246,8 +261,6 @@ class App extends React.Component {
     this.setState({ paragraphNumber: e.target.value })
     console.log(e.target.value)
   }
-
-
 
   render() {
     return (
