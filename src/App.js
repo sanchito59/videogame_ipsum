@@ -7,7 +7,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       paragraphNumber: 1,
-      loremIpsum: 'pizza',
+      loremIpsum: ['pizza'],
       sampleIpsum: ["1-Up",
         "A",
         "AA",
@@ -211,7 +211,6 @@ class App extends React.Component {
 
   sentence = function (sentence, wordsPerSentence, shuffledIpsum) {
     for (let i = 0; i < wordsPerSentence; i++) {
-      console.log('wordsPerSentence loop: ', i)
       sentence.push(shuffledIpsum[i]);
       shuffledIpsum.shift();
     }
@@ -231,7 +230,6 @@ class App extends React.Component {
     } else {
       let finalIpsum = [];
       for (let i = 0; i < paragraphs; i++) {
-        console.log('paragraph loop: ', i)
         for (let i = 0; i < sentencesPerParagraph; i++) {
           this.sentence(sentence, wordsPerSentence, shuffledIpsum);
           let lastWordInSentence = sentence.pop() + ".";
@@ -248,7 +246,6 @@ class App extends React.Component {
       finalIpsum.push(loremParagraph.join(' '))
       finalIpsum = finalIpsum.join('')
       finalIpsum = finalIpsum.split('<br/>')
-      // finalIpsum = finalIpsum.replace(/['"]+/g, '')
       loremParagraph = [];
       this.setState({
         loremIpsum: finalIpsum

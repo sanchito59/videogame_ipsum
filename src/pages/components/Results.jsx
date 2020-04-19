@@ -18,16 +18,20 @@ const ResultsContainer = styled.div`
 
 const ResultsParagraph = styled.p`
   width: 90%;
-  margin: 0 auto;
+  margin: 10px auto;
   color: white;
 `;
 
 export default function Results(props) {
   const { loremIpsum } = props;
+  console.log(typeof loremIpsum);
+  console.log(loremIpsum);
   return (
     <>
       <ResultsContainer>
-        <ResultsParagraph>{loremIpsum}</ResultsParagraph>
+        {loremIpsum.map((paragraph, i) => {
+          return <ResultsParagraph key={i}>{paragraph}</ResultsParagraph>;
+        })}
       </ResultsContainer>
       ;
     </>

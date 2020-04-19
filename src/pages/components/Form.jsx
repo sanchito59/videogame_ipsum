@@ -39,7 +39,7 @@ export default function Form(props) {
     <>
       <IpsumForm action="" onSubmit={props.ipsumGeneration}>
         <Input
-          placeholder="3"
+          placeholder="1"
           type="text"
           onChange={props.handleIpsumGeneration}
         />
