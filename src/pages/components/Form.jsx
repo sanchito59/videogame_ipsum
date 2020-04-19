@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Button from "../components/Button";
 
 const IpsumForm = styled.form`
   background-color: rgb(110, 127, 128);
@@ -24,14 +25,6 @@ const Input = styled.input`
   border-radius: 4px;
   margin: 1%;
   text-align: center;
-`;
-
-const Button = styled.button`
-  border-radius: 8px;
-  text-transform: uppercase;
-  margin-top: 1%;
-  margin-bottom: 1%;
-  margin-left: 5%;
 `;
 
 export default function Form(props) {
