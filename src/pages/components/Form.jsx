@@ -27,6 +27,15 @@ const Input = styled.input`
   text-align: center;
 `;
 
+const GenerateButton = styled(Button)`
+  &::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f11b";
+    padding-right: 5px;
+    font-weight: 600;
+  }
+`;
+
 export default function Form(props) {
   return (
     <>
@@ -35,9 +44,10 @@ export default function Form(props) {
           placeholder="1"
           type="text"
           onChange={props.handleIpsumGeneration}
+          autofocus="true"
         />
         <Label>paragraphs</Label>
-        <Button>Generate!</Button>
+        <GenerateButton>Generate!</GenerateButton>
       </IpsumForm>
     </>
   );

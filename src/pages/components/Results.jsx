@@ -18,8 +18,6 @@ const OuterContainer = styled.div`
 `;
 
 const ResultsContainer = styled.div`
-  background-color: rgb(110, 127, 128);
-  border-radius: 8px;
   padding-top: 30px;
   padding-bottom: 30px;
   margin: 0px auto;
@@ -37,6 +35,15 @@ const ResultsParagraph = styled.p`
   color: white;
 `;
 
+const CopyButton = styled(Button)`
+  padding: 10px;
+  &::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f0c5";
+    padding-right: 5px;
+  }
+`;
+
 new ClipboardJS("#copy");
 
 export default function Results(props) {
@@ -46,9 +53,9 @@ export default function Results(props) {
   return (
     <>
       <OuterContainer>
-        <Button id="copy" data-clipboard-target="#results">
+        <CopyButton id="copy" data-clipboard-target="#results">
           Copy
-        </Button>
+        </CopyButton>
         <ResultsContainer id="results">
           {loremIpsum.map((paragraph, i) => {
             return <ResultsParagraph key={i}>{paragraph}</ResultsParagraph>;
