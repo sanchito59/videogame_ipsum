@@ -14,8 +14,10 @@ export default function Homepage(props) {
   const {
     handleIpsumGeneration,
     ipsumGeneration,
-    paragraphNumber,
     loremIpsum,
+    paragraphNumber,
+    handleClickShowAlert,
+    showingAlert,
   } = props;
 
   console.log("homepage props: ", props);
@@ -27,7 +29,11 @@ export default function Homepage(props) {
         ipsumGeneration={ipsumGeneration}
         paragraphNumber={paragraphNumber}
       />
-      <Results loremIpsum={loremIpsum} />
+      <Results
+        loremIpsum={loremIpsum}
+        showingAlert={showingAlert}
+        handleClickShowAlert={handleClickShowAlert}
+      />
     </Page>
   );
 }

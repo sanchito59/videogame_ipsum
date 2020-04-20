@@ -2,6 +2,8 @@ import React from "react";
 import ClipboardJS from "clipboard";
 import styled from "styled-components";
 import Button from "./../components/Button";
+// Assets
+import "./../../assets/alert.scss";
 
 const OuterContainer = styled.div`
   background-color: rgb(110, 127, 128);
@@ -35,8 +37,21 @@ const ResultsParagraph = styled.p`
   color: white;
 `;
 
+const CopyWrapper = styled.div`
+  display: flex;
+  height: 50px;
+`;
+
 const CopyButton = styled(Button)`
   padding: 10px;
+  outline: none;
+  transition: box-shadow 0.5s;
+
+  :hover {
+    box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.5s;
+  }
+
   &::before {
     font-family: "Font Awesome 5 Free";
     content: "\f0c5";
@@ -44,18 +59,36 @@ const CopyButton = styled(Button)`
   }
 `;
 
+const Alert = styled.p`
+  font-weight: bold;
+  font-style: italic;
+  display: none;
+  padding-left: 20px;
+`;
+
 new ClipboardJS("#copy");
 
 export default function Results(props) {
-  const { loremIpsum } = props;
-  console.log(typeof loremIpsum);
-  console.log(loremIpsum);
+  const { loremIpsum, handleClickShowAlert, showingAlert } = props;
+  console.log(showingAlert);
   return (
     <>
       <OuterContainer>
-        <CopyButton id="copy" data-clipboard-target="#results">
-          Copy
-        </CopyButton>
+        <CopyWrapper>
+          <CopyButton
+            id="copy"
+            data-clipboard-target="#results"
+            className={showingAlert ? "alert" : "no-alert"}
+            onClick={handleClickShowAlert}
+          >
+            Copy
+          </CopyButton>
+          <Alert
+            className={showingAlert ? "flash-message" : "no-flash-message"}
+          >
+            text copied!
+          </Alert>
+        </CopyWrapper>
         <ResultsContainer id="results">
           {loremIpsum.map((paragraph, i) => {
             return <ResultsParagraph key={i}>{paragraph}</ResultsParagraph>;
