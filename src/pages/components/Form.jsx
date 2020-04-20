@@ -44,7 +44,7 @@ export default function Form(props) {
           placeholder="1"
           type="text"
           onChange={props.handleIpsumGeneration}
-          autofocus="true"
+          autoFocus={true}
         />
         <Label>paragraphs</Label>
         <GenerateButton>Generate!</GenerateButton>
