@@ -1,173 +1,643 @@
- "1-Up",
- "A",
- "AA",
- "AAA",
- "Achievements",
- "AFK",
- "Aggro",
- "AI",
- "Aimbot",
- "Alpha",
- "Animation Cancel",
- "Ambient Occlusion",
- "Anti-Aliasing",
- "AoE",
- "Assist",
- "Avatar",
- "Ban",
- "Barrel Stuffing",
- "Beat 'Em Up",
- "Beta",
- "Bonus",
- "Boosting",
- "Boss",
- "Camping/Active Camping",
- "Campaign",
- "Casual",
- "Chams",
- "Character design",
- "Cheat",
- "Checkpoint",
- "Chems",
- "Class",
- "Combo",
- "Commonwealth",
- "Continue",
- "Console",
- "Controller",
- "Co-op",
- "CoD",
- "CP",
- "Creeps/CS",
- "Crowd control",
- "Critical Hit",
- "Cutscene",
- "Deathmatch",
- "Debuff",
- "Demo",
- "Die-and-Retry",
- "Difficulty",
- "DLC",
- "D-Pad",
- "DPS",
- "Draw distance",
- "Driving simulator",
- "DRM",
- "Dual Wield",
- "Easter egg",
- "Emulator",
- "Epistle ",
- "Exploit",
- "Faceroll",
- "Fatality",
- "Farming",
- "Feeding",
- "FOV",
- "Fighting Game",
- "Flying Simulator",
- "FPS",
- "Frag",
- "Frame",
- "FP",
- "GameBattles",
- "Game Over",
- "Gamer",
- "Ghosting",
- "God Mode",
- "GG",
- "GG no re",
- "GG ez",
- "Gimp",
- "Glitch",
- "Griefing",
- "Grinding",
- "Guard",
- "Hacker",
- "Healer",
- "Headshot",
- "Hit Points (HP)",
- "Holy Trinity",
- "Indie",
-"Job",
-"JRPG",
-"Juan",
-"KDR",
-"Kick",
-"Kite",
-"Kill stealing",
-"KK",
-"KO",
-"Konami code",
-"LAN",
-"LoL",
-"Level (experience)",
-"Level (map)",
-"Level design",
-"Mana",
-"Manic shooter",
-"Map",
-"Magic Points (MP)",
-"MLG",
- "MMO",
- "MOBA",
- "Model",
- "Mute",
- "Nerf",
- "Noob",
- "Noob tube",
- "NPC",
- "OHKO",
- "One-shot-kill",
- "OP",
- "Open world",
- "OST",
- "Party game",
- "Permadeath",
- "Platformer",
- "Point-and-click",
- "Pre-firing",
- "PvP",
- "PvE",
- "Quickscope",
- "QQ",
- "QTE",
- "Ragequit",
- "Respawn",
- "Resolution",
- "Rekt",
- "RNG",
- "Rocket jump",
- "RPG",
- "RQ",
- "RTS",
- "Rush",
- "Sandbox",
- "Screen-peeking",
- "Shoot 'em up",
- "Sidescroller",
- "Sidequest",
- "Smoothskin",
- "Smurf",
- "SnD",
- "Speedhacks",
- "Speedrun",
- "Spoiler",
- "Sprite",
- "Stats",
- "Strafing",
- "Sweaty goal",
- "SWTOR",
- "Tank",
- "Trickshot",
- "Troll/Trolling",
- "Tryhard",
- "Twink",
- "ÜberCharge",
- "VAC",
- "Warrior",
- "Walling/Wall hack",
- "WoW",
- "Wombo Combo",
- "W+M1",
- "XP",
- "Z-targeting",
+[
+  [
+    [
+      "\n1up",
+      " 1up"
+    ]
+  ],
+  [
+    [
+      "\n3d_graphics",
+      " 3d_graphics"
+    ]
+  ],
+  [
+    [
+      "\n32-bit",
+      " 32-bit"
+    ]
+  ],
+  [
+    [
+      "\naaa",
+      " aaa"
+    ]
+  ],
+  [
+    [
+      "\naction_point",
+      " action_point"
+    ]
+  ],
+  [
+    [
+      "\nadventure_game",
+      " adventure_game"
+    ]
+  ],
+  [
+    [
+      "\naiming_down_sights",
+      " aiming_down_sights"
+    ]
+  ],
+  [
+    [
+      "\nanimatic",
+      " animatic"
+    ]
+  ],
+  [
+    [
+      "\naoe",
+      " aoe"
+    ]
+  ],
+  [
+    [
+      "\nassault_mode",
+      " assault_mode"
+    ]
+  ],
+  [
+    [
+      "\nattract_mode",
+      " attract_mode"
+    ]
+  ],
+  [
+    [
+      "\nauto_battler",
+      " auto_battler"
+    ]
+  ],
+  [
+    [
+      "\nbattle_pass",
+      " battle_pass"
+    ]
+  ],
+  [
+    [
+      "\nbonus_stage",
+      " bonus_stage"
+    ]
+  ],
+  [
+    [
+      "\nbottomless_pit",
+      " bottomless_pit"
+    ]
+  ],
+  [
+    [
+      "\nbullshot",
+      " bullshot"
+    ]
+  ],
+  [
+    [
+      "\ncapture_the_flag",
+      " capture_the_flag"
+    ]
+  ],
+  [
+    [
+      "\ncharacter_class",
+      " character_class"
+    ]
+  ],
+  [
+    [
+      "\nchiptune",
+      " chiptune"
+    ]
+  ],
+  [
+    [
+      "\nclosed_beta",
+      " closed_beta"
+    ]
+  ],
+  [
+    [
+      "\ncompulsion_loop",
+      " compulsion_loop"
+    ]
+  ],
+  [
+    [
+      "\nconstruction_and_management_simulation",
+      " construction_and_management_simulation"
+    ]
+  ],
+  [
+    [
+      "\ncontroller",
+      " controller"
+    ]
+  ],
+  [
+    [
+      "\ncorruptor",
+      " corruptor"
+    ]
+  ],
+  [
+    [
+      "\ncredit-feeding",
+      " credit-feeding"
+    ]
+  ],
+  [
+    [
+      "\ncut-in",
+      " cut-in"
+    ]
+  ],
+  [
+    [
+      "\ndamage_per_second",
+      " damage_per_second"
+    ]
+  ],
+  [
+    [
+      "\ndead_zone",
+      " dead_zone"
+    ]
+  ],
+  [
+    [
+      "\ndeveloper",
+      " developer"
+    ]
+  ],
+  [
+    [
+      "\ndigital_rights_management",
+      " digital_rights_management"
+    ]
+  ],
+  [
+    [
+      "\ndpm",
+      " dpm"
+    ]
+  ],
+  [
+    [
+      "_drop-out"
+    ]
+  ],
+  [
+    [
+      "\ndynamic_game_difficulty_balancing",
+      " dynamic_game_difficulty_balancing"
+    ]
+  ],
+  [
+    [
+      "\nemulator",
+      " emulator"
+    ]
+  ],
+  [
+    [
+      "\nesp_cheats",
+      " esp_cheats"
+    ]
+  ],
+  [
+    [
+      "\nfarming",
+      " farming"
+    ]
+  ],
+  [
+    [
+      "\nfirst-party_developer",
+      " first-party_developer"
+    ]
+  ],
+  [
+    [
+      "\nflip-screen",
+      " flip-screen"
+    ]
+  ],
+  [
+    [
+      "\nfps",
+      " fps"
+    ]
+  ],
+  [
+    [
+      "\nfree_look",
+      " free_look"
+    ]
+  ],
+  [
+    [
+      "\ngame_engine",
+      " game_engine"
+    ]
+  ],
+  [
+    [
+      "\ngame_port",
+      " game_port"
+    ]
+  ],
+  [
+    [
+      "\ngank",
+      " gank"
+    ]
+  ],
+  [
+    [
+      "\ngib",
+      " gib"
+    ]
+  ],
+  [
+    [
+      "\ngold_sink",
+      " gold_sink"
+    ]
+  ],
+  [
+    [
+      "\ngrinding",
+      " grinding"
+    ]
+  ],
+  [
+    [
+      "\nhead_bob",
+      " head_bob"
+    ]
+  ],
+  [
+    [
+      "\nheat_map",
+      " heat_map"
+    ]
+  ],
+  [
+    [
+      "\nhorde_mode",
+      " horde_mode"
+    ]
+  ],
+  [
+    [
+      "\ninfluencer_marketing",
+      " influencer_marketing"
+    ]
+  ],
+  [
+    [
+      "\ninvisible_wall",
+      " invisible_wall"
+    ]
+  ],
+  [
+    [
+      "\njrpg",
+      " jrpg"
+    ]
+  ],
+  [
+    [
+      "\nkill_screen",
+      " kill_screen"
+    ]
+  ],
+  [
+    [
+      "\nknock-back",
+      " knock-back"
+    ]
+  ],
+  [
+    [
+      "\nlast_hitting",
+      " last_hitting"
+    ]
+  ],
+  [
+    [
+      "\nlevel",
+      " level"
+    ]
+  ],
+  [
+    [
+      "\nlight_gun",
+      " light_gun"
+    ]
+  ],
+  [
+    [
+      "\nloot_system",
+      " loot_system"
+    ]
+  ],
+  [
+    [
+      "\nmain_quest",
+      " main_quest"
+    ]
+  ],
+  [
+    [
+      "\nmatchmaking",
+      " matchmaking"
+    ]
+  ],
+  [
+    [
+      "\nmetroidvania",
+      " metroidvania"
+    ]
+  ],
+  [
+    [
+      "\nminigame",
+      " minigame"
+    ]
+  ],
+  [
+    [
+      "\nmode",
+      " mode"
+    ]
+  ],
+  [
+    [
+      "\nmudflation",
+      " mudflation"
+    ]
+  ],
+  [
+    [
+      "\nmultiplayer_online_battle_arena",
+      " multiplayer_online_battle_arena"
+    ]
+  ],
+  [
+    [
+      "\nnerf",
+      " nerf"
+    ]
+  ],
+  [
+    [
+      "\nnon-player_character",
+      " non-player_character"
+    ]
+  ],
+  [
+    [
+      "\non-disc_dlc",
+      " on-disc_dlc"
+    ]
+  ],
+  [
+    [
+      "\nopen_world",
+      " open_world"
+    ]
+  ],
+  [
+    [
+      "\npaddle",
+      " paddle"
+    ]
+  ],
+  [
+    [
+      "\npause",
+      " pause"
+    ]
+  ],
+  [
+    [
+      "\npervasive_game",
+      " pervasive_game"
+    ]
+  ],
+  [
+    [
+      "\npixel_hunting",
+      " pixel_hunting"
+    ]
+  ],
+  [
+    [
+      "\nplayer_versus_environment",
+      " player_versus_environment"
+    ]
+  ],
+  [
+    [
+      "\npoint_of_no_return",
+      " point_of_no_return"
+    ]
+  ],
+  [
+    [
+      "\npower_spike",
+      " power_spike"
+    ]
+  ],
+  [
+    [
+      "\npublisher",
+      " publisher"
+    ]
+  ],
+  [
+    [
+      "\nquicksave",
+      " quicksave"
+    ]
+  ],
+  [
+    [
+      "\nrandom_encounter",
+      " random_encounter"
+    ]
+  ],
+  [
+    [
+      "\nremorting",
+      " remorting"
+    ]
+  ],
+  [
+    [
+      "\nretrogaming",
+      " retrogaming"
+    ]
+  ],
+  [
+    [
+      "\nrng",
+      " rng"
+    ]
+  ],
+  [
+    [
+      "\nrole-playing_video_game",
+      " role-playing_video_game"
+    ]
+  ],
+  [
+    [
+      "\nrubber_banding",
+      " rubber_banding"
+    ]
+  ],
+  [
+    [
+      "\nsave_point",
+      " save_point"
+    ]
+  ],
+  [
+    [
+      "\nscreen_cheat",
+      " screen_cheat"
+    ]
+  ],
+  [
+    [
+      "\nsecret_character",
+      " secret_character"
+    ]
+  ],
+  [
+    [
+      "\nshovelware",
+      " shovelware"
+    ]
+  ],
+  [
+    [
+      "\nsingle-player",
+      " single-player"
+    ]
+  ],
+  [
+    [
+      "\nskirmish_mode",
+      " skirmish_mode"
+    ]
+  ],
+  [
+    [
+      "\nspawn",
+      " spawn"
+    ]
+  ],
+  [
+    [
+      "\nsplit-screen_multiplayer",
+      " split-screen_multiplayer"
+    ]
+  ],
+  [
+    [
+      "\nstrategy_guide",
+      " strategy_guide"
+    ]
+  ],
+  [
+    [
+      "\nsurvival_game",
+      " survival_game"
+    ]
+  ],
+  [
+    [
+      "\ntechnology_tree",
+      " technology_tree"
+    ]
+  ],
+  [
+    [
+      "\ntheorycraft",
+      " theorycraft"
+    ]
+  ],
+  [
+    [
+      "\ntime_attack",
+      " time_attack"
+    ]
+  ],
+  [
+    [
+      "\ntouchscreen",
+      " touchscreen"
+    ]
+  ],
+  [
+    [
+      "\ntriple_jump",
+      " triple_jump"
+    ]
+  ],
+  [
+    [
+      "\nunderpowered",
+      " underpowered"
+    ]
+  ],
+  [
+    [
+      "\nvaporware",
+      " vaporware"
+    ]
+  ],
+  [
+    [
+      "\nwaggle",
+      " waggle"
+    ]
+  ],
+  [
+    [
+      "\nwall_climb",
+      " wall_climb"
+    ]
+  ],
+  [
+    [
+      "\nwanted_level",
+      " wanted_level"
+    ]
+  ],
+  [
+    [
+      "\nwhale",
+      " whale"
+    ]
+  ],
+  [
+    [
+      "\nwrapping",
+      " wrapping"
+    ]
+  ],
+  [
+    [
+      "\nzero-player_game",
+      " zero-player_game"
+    ]
+  ]
+]
