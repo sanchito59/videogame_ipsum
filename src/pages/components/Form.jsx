@@ -37,13 +37,14 @@ const GenerateButton = styled(Button)`
 `;
 
 export default function Form(props) {
+  const { ipsumGeneration, handleIpsumGeneration } = props;
   return (
     <>
-      <IpsumForm action="" onSubmit={props.ipsumGeneration}>
+      <IpsumForm action="" onSubmit={ipsumGeneration}>
         <Input
           placeholder="1"
           type="text"
-          onChange={props.handleIpsumGeneration}
+          onChange={handleIpsumGeneration}
           autoFocus={true}
         />
         <Label>paragraphs</Label>

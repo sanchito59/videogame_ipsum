@@ -70,7 +70,6 @@ new ClipboardJS("#copy");
 
 export default function Results(props) {
   const { loremIpsum, handleClickShowAlert, showingAlert } = props;
-  console.log(showingAlert);
   return (
     <>
       <OuterContainer>
