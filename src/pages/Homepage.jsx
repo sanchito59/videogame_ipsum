@@ -6,7 +6,8 @@ import Results from "./components/Results";
 
 const Page = styled.div`
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  max-height: 100%;
   background-color: rgb(36, 38, 47);
 `;
 
