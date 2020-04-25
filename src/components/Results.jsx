@@ -1,9 +1,9 @@
 import React from "react";
 import ClipboardJS from "clipboard";
 import styled from "styled-components";
-import Button from "./../components/Button";
+import Button from "./Button";
 // Assets
-import "./../../assets/alert.scss";
+import "./../assets/alert.scss";
 
 const OuterContainer = styled.div`
   background-color: rgb(110, 127, 128);

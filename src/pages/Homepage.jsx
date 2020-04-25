@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import PageTitle from "./components/PageTitle";
-import IpsumForm from "./components/Form";
-import Results from "./components/Results";
+import PageTitle from "../components/PageTitle";
+import IpsumForm from "../components/Form";
+import Results from "../components/Results";
 
 const Page = styled.div`
   width: 100%;
