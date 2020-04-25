@@ -258,14 +258,12 @@ class App extends React.Component {
   handleIpsumGeneration = e => {
     e.preventDefault();
     this.setState({ paragraphNumber: e.target.value })
-    console.log(e.target.value)
   }
 
   handleClickShowAlert() {
     this.setState({
       showingAlert: true
     })
-    console.log(this.state);
 
     setTimeout(() => {
       this.setState({
