@@ -19,8 +19,6 @@ export default function Homepage(props) {
     loremIpsum,
     paragraphNumber,
   } = props;
-
-  console.log("homepage props: ", props);
   return (
     <Page>
       <PageTitle>Video Game Ipsum</PageTitle>
