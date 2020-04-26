@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import PageTitle from "../components/PageTitle";
+import SubTitle from "../components/SubTitle";
 import IpsumForm from "../components/Form";
 import Results from "../components/Results";
 
@@ -25,6 +26,7 @@ export default function Homepage(props) {
   return (
     <Page>
       <PageTitle>Video Game Ipsum</PageTitle>
+      <SubTitle>gaming themed lorem ipsum generator</SubTitle>
       <IpsumForm
         handleIpsumGeneration={handleIpsumGeneration}
         ipsumGeneration={ipsumGeneration}
