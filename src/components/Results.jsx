@@ -1,5 +1,6 @@
 import React from "react";
 import ClipboardJS from "clipboard";
+import { message } from "antd";
 import styled from "styled-components";
 import Button from "./Button";
 // Assets
@@ -39,10 +40,11 @@ const ResultsParagraph = styled.p`
 
 const CopyWrapper = styled.div`
   display: flex;
-  height: 50px;
 `;
 
 const CopyButton = styled(Button)`
+  margin: 0 auto;
+  width: 160px;
   padding: 10px;
   transition: box-shadow 0.5s;
 
@@ -58,17 +60,22 @@ const CopyButton = styled(Button)`
   }
 `;
 
-const Alert = styled.p`
-  font-weight: bold;
-  font-style: italic;
-  display: none;
-  padding-left: 20px;
-`;
+message.config({
+  top: 220,
+  duration: 1,
+  maxCount: 1,
+  rtl: true,
+});
+
+const success = () => {
+  message.success("Copied to clipboard", 1);
+};
 
 new ClipboardJS("#copy");
 
 export default function Results(props) {
-  const { loremIpsum, handleClickShowAlert, showingAlert } = props;
+  const { loremIpsum } = props;
+
   return (
     <>
       <OuterContainer>
@@ -76,16 +83,10 @@ export default function Results(props) {
           <CopyButton
             id="copy"
             data-clipboard-target="#results"
-            className={showingAlert ? "alert" : "no-alert"}
-            onClick={handleClickShowAlert}
+            onClick={success}
           >
             Copy
           </CopyButton>
-          <Alert
-            className={showingAlert ? "flash-message" : "no-flash-message"}
-          >
-            text copied!
-          </Alert>
         </CopyWrapper>
         <ResultsContainer id="results">
           {loremIpsum.map((paragraph, i) => {

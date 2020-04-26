@@ -10,11 +10,9 @@ class App extends React.Component {
     this.state = {
       paragraphNumber: 1,
       loremIpsum: ['pizza'],
-      showingAlert: false,
     };
     this.ipsumGeneration = this.ipsumGeneration.bind(this)
     this.handleIpsumGeneration = this.handleIpsumGeneration.bind(this);
-    this.handleClickShowAlert = this.handleClickShowAlert.bind(this);
   }
 
 
@@ -128,28 +126,14 @@ class App extends React.Component {
     this.setState({ paragraphNumber: e.target.value })
   }
 
-  handleClickShowAlert() {
-    this.setState({
-      showingAlert: true
-    })
-
-    setTimeout(() => {
-      this.setState({
-        showingAlert: false
-      });
-    }, 1000);
-  }
-
   render() {
     return (
       <div className="App">
         <Homepage
           handleIpsumGeneration={this.handleIpsumGeneration}
-          handleClickShowAlert={this.handleClickShowAlert}
           ipsumGeneration={this.ipsumGeneration}
           loremIpsum={this.state.loremIpsum}
           paragraphNumber={this.state.paragraphNumber}
-          showingAlert={this.state.showingAlert}
         />
       </div>
     );
