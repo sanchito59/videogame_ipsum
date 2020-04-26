@@ -9,7 +9,7 @@ const Page = styled.div`
   width: 100%;
   min-height: 100vh;
   max-height: 100%;
-  background-color: rgb(36, 38, 47);
+  background-color: black;
 `;
 
 export default function Homepage(props) {

@@ -1,4 +1,5 @@
 .alert {
+  font-family: "Press Start 2P", cursive;
   transition: background-color 1s ease;
   background-color: rgb(201, 201, 201);
 }
@@ -9,6 +10,7 @@
 }
 
 .flash-message {
+  font-family: "Press Start 2P", cursive;
   color: white !important;
   transition: color 0.5s ease;
   display: block !important;

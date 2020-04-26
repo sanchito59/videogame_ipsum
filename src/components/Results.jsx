@@ -44,7 +44,6 @@ const CopyWrapper = styled.div`
 
 const CopyButton = styled(Button)`
   padding: 10px;
-  outline: none;
   transition: box-shadow 0.5s;
 
   :hover {
