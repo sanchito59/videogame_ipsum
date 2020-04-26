@@ -49,10 +49,11 @@ class App extends React.Component {
   ipsumGeneration(e) {
     e.preventDefault();
     const paragraphs = this.state.paragraphNumber;
-    let shuffledIpsum = this.shuffle(ipsumText.slice());
+    let shuffledIpsum = this.shuffle(ipsumText);
     let wordsPerSentence = this.between(4, 10);
     let sentencesPerParagraph = this.between(3, 6);
     let sentence = [];
+    let processedSentence = '';
     let loremParagraph = [];
     if (paragraphs > 7) {
       return null;
@@ -63,7 +64,8 @@ class App extends React.Component {
           this.sentence(sentence, wordsPerSentence, shuffledIpsum);
           let lastWordInSentence = sentence.pop() + ".";
           sentence.push(lastWordInSentence)
-          let processedSentence = sentence.join(' ');
+          processedSentence = sentence.join(' ');
+          // debugger;
           sentence = [];
           wordsPerSentence = this.between(8, 15);
           sentencesPerParagraph = this.between(4, 6);
@@ -84,10 +86,11 @@ class App extends React.Component {
 
   defaultIpsum() {
     const paragraphs = this.state.paragraphNumber;
-    let shuffledIpsum = this.shuffle(ipsumText.slice());
+    let shuffledIpsum = this.shuffle(ipsumText);
     let wordsPerSentence = this.between(4, 10);
     let sentencesPerParagraph = this.between(3, 6);
     let sentence = [];
+    let processedSentence = '';
     let loremParagraph = [];
     if (paragraphs > 7) {
       return null;
@@ -98,7 +101,7 @@ class App extends React.Component {
           this.sentence(sentence, wordsPerSentence, shuffledIpsum);
           let lastWordInSentence = sentence.pop() + ".";
           sentence.push(lastWordInSentence)
-          let processedSentence = sentence.join(' ');
+          processedSentence = sentence.join(' ');
           sentence = [];
           wordsPerSentence = this.between(8, 15);
           sentencesPerParagraph = this.between(4, 6);

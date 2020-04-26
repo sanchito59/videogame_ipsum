@@ -94,7 +94,6 @@ export default function Results(props) {
           })}
         </ResultsContainer>
       </OuterContainer>
-      ;
     </>
   );
 }
