@@ -1,9 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import Button from "./Button";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const IpsumForm = styled.form`
-  background-color: rgb(110, 127, 128);
+  background-color: black;
   border-radius: 8px;
   width: 50%;
   margin: 0 auto;
@@ -28,6 +30,7 @@ const Input = styled.input`
 `;
 
 const GenerateButton = styled(Button)`
+  margin-left: 20px;
   &::before {
     font-family: "Font Awesome 5 Free";
     content: "\f11b";
@@ -36,11 +39,18 @@ const GenerateButton = styled(Button)`
   }
 `;
 
+const RetroMenuSelectIcon = styled(FontAwesomeIcon)`
+  margin-right: 20px;
+  color: white;
+  font-size: 1.3rem;
+`;
+
 export default function Form(props) {
   const { ipsumGeneration, handleIpsumGeneration } = props;
   return (
     <>
       <IpsumForm action="" onSubmit={ipsumGeneration}>
+        <RetroMenuSelectIcon icon={faChevronRight} />
         <Input
           placeholder="1"
           type="text"
