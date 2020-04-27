@@ -49,7 +49,7 @@ class App extends React.Component {
   ipsumGeneration(e) {
     e.preventDefault();
     const paragraphs = this.state.paragraphNumber;
-    let shuffledIpsum = this.shuffle(ipsumText);
+    let shuffledIpsum = this.shuffle(ipsumText.slice());
     let wordsPerSentence = this.between(4, 10);
     let sentencesPerParagraph = this.between(3, 6);
     let sentence = [];
@@ -86,7 +86,7 @@ class App extends React.Component {
 
   defaultIpsum() {
     const paragraphs = this.state.paragraphNumber;
-    let shuffledIpsum = this.shuffle(ipsumText);
+    let shuffledIpsum = this.shuffle(ipsumText.slice());
     let wordsPerSentence = this.between(4, 10);
     let sentencesPerParagraph = this.between(3, 6);
     let sentence = [];

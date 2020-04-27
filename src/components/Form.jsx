@@ -17,8 +17,9 @@ const IpsumForm = styled.form`
 `;
 
 const Label = styled.label`
+  font-family: "Press Start 2P", cursive;
   color: white;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   padding-left: 10px;
 `;
 

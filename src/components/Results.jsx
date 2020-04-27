@@ -7,9 +7,9 @@ import Button from "./Button";
 import "./../assets/alert.scss";
 
 const OuterContainer = styled.div`
-  background-color: rgb(110, 127, 128);
+  background-color: black;
+  border: 2px solid white;
   width: 50%;
-  border-radius: 8px;
   padding-top: 30px;
   padding-bottom: 10px;
   margin: 40px auto;
@@ -33,6 +33,8 @@ const ResultsContainer = styled.div`
 `;
 
 const ResultsParagraph = styled.p`
+  font-family: "Press Start 2P", cursive;
+  font-size: 0.8rem;
   width: 90%;
   margin: 10px auto;
   color: white;
@@ -40,6 +42,8 @@ const ResultsParagraph = styled.p`
 
 const CopyWrapper = styled.div`
   display: flex;
+  border-bottom: 2px solid white;
+  padding-bottom: 30px;
 `;
 
 const CopyButton = styled(Button)`
