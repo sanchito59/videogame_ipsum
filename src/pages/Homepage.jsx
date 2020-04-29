@@ -4,6 +4,7 @@ import PageTitle from "../components/PageTitle";
 import SubTitle from "../components/SubTitle";
 import IpsumForm from "../components/Form";
 import Results from "../components/Results";
+import Footer from "../components/Footer";
 
 const Page = styled.div`
   width: 100%;
@@ -31,6 +32,7 @@ export default function Homepage(props) {
         paragraphNumber={paragraphNumber}
       />
       <Results loremIpsum={loremIpsum} />
+      <Footer />
     </Page>
   );
 }
