@@ -26,7 +26,6 @@ const ResultsContainer = styled.div`
   margin: 0px auto;
   text-align: left;
   letter-spacing: 0.5px;
-  /* text-transform: lowercase; */
 
   @media screen and (max-width: 768px) {
     width: 90%;
