@@ -12,7 +12,7 @@ const OuterContainer = styled.div`
   width: 50%;
   padding-top: 30px;
   padding-bottom: 10px;
-  margin: 40px auto;
+  margin: 60px auto;
   text-align: left;
 
   @media screen and (max-width: 768px) {
@@ -65,8 +65,8 @@ const CopyButton = styled(Button)`
 `;
 
 message.config({
-  top: 220,
-  duration: 1,
+  top: 215,
+  duration: 0.5,
   maxCount: 1,
   rtl: true,
 });
