@@ -24,6 +24,7 @@ const Label = styled.label`
 `;
 
 const Input = styled.input`
+  font-family: "Press Start 2P", cursive;
   width: 40px;
   border-radius: 4px;
   margin: 1%;

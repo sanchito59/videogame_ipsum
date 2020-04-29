@@ -10,6 +10,7 @@ const Page = styled.div`
   min-height: 100vh;
   max-height: 100%;
   background-color: black;
+  text-shadow: 0 0 5px #c8c8c8;
   padding-bottom: 20px;
 `;
 
