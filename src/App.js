@@ -15,6 +15,14 @@ class App extends React.Component {
     this.handleIpsumGeneration = this.handleIpsumGeneration.bind(this);
   }
 
+  clearSelection = function () {
+    if (window.getSelection) {
+      window.getSelection().removeAllRanges();
+    } else if (document.selection) {
+      document.selection.empty();
+    }
+  }
+
 
   shuffle = function (array) {
     var currentIndex = array.length;
@@ -49,6 +57,7 @@ class App extends React.Component {
 
   ipsumGeneration(e) {
     e.preventDefault();
+    this.clearSelection();
     const paragraphs = this.state.paragraphNumber;
     let shuffledIpsum = this.shuffle(ipsumText.slice());
     let wordsPerSentence = this.between(4, 10);
