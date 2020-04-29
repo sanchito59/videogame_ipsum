@@ -43,6 +43,8 @@ class App extends React.Component {
       sentence.push(shuffledIpsum[i]);
       shuffledIpsum.shift();
     }
+    console.log('sentence is: ', sentence)
+    sentence[0] = sentence[0].charAt(0).toUpperCase() + sentence[0].substr(1);
     return sentence;
   }
 
