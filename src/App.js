@@ -40,9 +40,10 @@ class App extends React.Component {
 
   sentence = function (sentence, wordsPerSentence, shuffledIpsum) {
     for (let i = 0; i < wordsPerSentence; i++) {
-      sentence.push(shuffledIpsum[i]);
-      shuffledIpsum.shift();
+      sentence.push(shuffledIpsum[shuffledIpsum.length - 1]);
+      shuffledIpsum.pop();
     }
+    sentence[0] = sentence[0].charAt(0).toUpperCase() + sentence[0].substr(1);
     return sentence;
   }
 
@@ -65,7 +66,6 @@ class App extends React.Component {
           let lastWordInSentence = sentence.pop() + ".";
           sentence.push(lastWordInSentence)
           processedSentence = sentence.join(' ');
-          // debugger;
           sentence = [];
           wordsPerSentence = this.between(8, 15);
           sentencesPerParagraph = this.between(4, 6);
