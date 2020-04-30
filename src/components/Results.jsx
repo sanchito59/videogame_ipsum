@@ -38,6 +38,10 @@ const ResultsParagraph = styled.p`
   width: 90%;
   margin: 10px auto;
   color: white;
+
+  @media screen and (max-width: 768px) {
+    font-size: 0.55rem;
+  }
 `;
 
 const CopyWrapper = styled.div`
