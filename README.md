@@ -13,6 +13,7 @@ Need some placeholder text to display content with? Video Game Ipsum is a video 
 * Webpack / NPM
 * [styled-components](https://github.com/styled-components/styled-components)
 * [clipboard.js](https://clipboardjs.com/)
+* Agile / KANBAN workflow
 
  - - -
 
