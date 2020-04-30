@@ -1,6 +1,6 @@
 # [Video Game Ipsum](https://videogameipsum.netlify.app/)
 
-### by Chris Sanchez
+## By Chris Sanchez
 
 Need some placeholder text to display content with? Video Game Ipsum is a video game themed lorem ipsum generator built with React for video game, tech, or whatever themed website or copy you're working on!
 
