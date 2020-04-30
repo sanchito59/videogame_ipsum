@@ -10,6 +10,7 @@ class App extends React.Component {
     this.state = {
       paragraphNumber: 1,
       loremIpsum: ['pizza'],
+      generateClicks: 0,
     };
     this.ipsumGeneration = this.ipsumGeneration.bind(this)
     this.handleIpsumGeneration = this.handleIpsumGeneration.bind(this);
@@ -55,6 +56,12 @@ class App extends React.Component {
     return sentence;
   }
 
+  easterEgg = function () {
+    if (this.state.generateClicks > 10) {
+      console.log(this.state.generateClicks)
+    }
+  }
+
   ipsumGeneration(e) {
     e.preventDefault();
     this.clearSelection();
@@ -87,9 +94,9 @@ class App extends React.Component {
       finalIpsum = finalIpsum.join('')
       finalIpsum = finalIpsum.split('<br/>')
       loremParagraph = [];
-      this.setState({
-        loremIpsum: finalIpsum
-      })
+      this.setState({ loremIpsum: finalIpsum })
+      this.setState({ generateClicks: this.state.generateClicks + 1 })
+      this.easterEgg();
     }
   }
 
@@ -146,6 +153,7 @@ class App extends React.Component {
           ipsumGeneration={this.ipsumGeneration}
           loremIpsum={this.state.loremIpsum}
           paragraphNumber={this.state.paragraphNumber}
+          generateClicks={this.state.generateClicks}
         />
       </div>
     );
