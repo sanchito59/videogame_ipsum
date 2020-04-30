@@ -39,6 +39,9 @@ const GenerateButton = styled(Button)`
     padding-right: 5px;
     font-weight: 600;
   }
+  @media screen and (max-width: 768px) {
+    margin-top: 20px;
+  }
 `;
 
 const RetroMenuSelectIcon = styled(FontAwesomeIcon)`

@@ -28,7 +28,7 @@ const ResultsContainer = styled.div`
   letter-spacing: 0.5px;
 
   @media screen and (max-width: 768px) {
-    width: 90%;
+    width: 95%;
   }
 `;
 
