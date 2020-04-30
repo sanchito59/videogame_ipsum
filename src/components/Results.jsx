@@ -69,7 +69,7 @@ const CopyButton = styled(Button)`
 `;
 
 message.config({
-  top: 100,
+  top: 60,
   duration: 0.5,
   maxCount: 1,
   rtl: true,
