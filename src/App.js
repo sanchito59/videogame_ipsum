@@ -65,9 +65,17 @@ class App extends React.Component {
     return loremParagraph;
   }
 
+  processIpsum = (loremParagraph, finalIpsum) => {
+    finalIpsum.push(loremParagraph.join(' '));
+    finalIpsum = finalIpsum.join('');
+    finalIpsum = finalIpsum.split('<br/>');
+    return finalIpsum;
+  }
+
   ipsumGeneration(e) {
     e.preventDefault();
     this.clearSelection();
+
     const paragraphs = this.state.paragraphNumber;
     let shuffledIpsum = this.shuffle(ipsumText.slice());
     let wordsPerSentence = this.between(4, 10);
@@ -88,13 +96,10 @@ class App extends React.Component {
       loremParagraph.push('<br/>')
     }
 
-    finalIpsum.push(loremParagraph.join(' '))
-    finalIpsum = finalIpsum.join('')
-    finalIpsum = finalIpsum.split('<br/>')
-    loremParagraph = [];
+    let processedLoremIpsum = this.processIpsum(loremParagraph, finalIpsum);
 
     this.setState({
-      loremIpsum: finalIpsum
+      loremIpsum: processedLoremIpsum
     })
   }
 
@@ -117,13 +122,9 @@ class App extends React.Component {
         sentencesPerParagraph = this.between(4, 6);
         processedSentence = '';
       }
-      loremParagraph.push('<br/>')
     }
 
-    finalIpsum.push(loremParagraph.join(' '))
-    finalIpsum = finalIpsum.join('')
-    finalIpsum = finalIpsum.split('<br/>')
-    loremParagraph = [];
+    this.processIpsum(loremParagraph, finalIpsum);
 
     this.setState({
       loremIpsum: finalIpsum
