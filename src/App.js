@@ -55,6 +55,16 @@ class App extends React.Component {
     return sentence;
   }
 
+  processSentence = (loremParagraph, sentence, sentencesPerParagraph, processedSentence) => {
+    let lastWordInSentence = sentence.pop() + ".";
+    sentence.push(lastWordInSentence)
+    for (let i = 0; i < sentencesPerParagraph; i++) {
+      processedSentence = sentence.join(' ');
+    }
+    loremParagraph.push(processedSentence);
+    return loremParagraph;
+  }
+
   ipsumGeneration(e) {
     e.preventDefault();
     this.clearSelection();
@@ -65,32 +75,27 @@ class App extends React.Component {
     let sentence = [];
     let processedSentence = '';
     let loremParagraph = [];
-    if (paragraphs > 9) {
-      return null;
-    } else {
-      let finalIpsum = [];
-      for (let i = 0; i < paragraphs; i++) {
-        for (let i = 0; i < sentencesPerParagraph; i++) {
-          this.sentence(sentence, wordsPerSentence, shuffledIpsum);
-          let lastWordInSentence = sentence.pop() + ".";
-          sentence.push(lastWordInSentence)
-          processedSentence = sentence.join(' ');
-          sentence = [];
-          wordsPerSentence = this.between(8, 15);
-          sentencesPerParagraph = this.between(4, 6);
-          loremParagraph.push(processedSentence);
-          processedSentence = '';
-        }
-        loremParagraph.push('<br/>')
+    let finalIpsum = [];
+    for (let i = 0; i < paragraphs; i++) {
+      for (let i = 0; i < sentencesPerParagraph; i++) {
+        this.sentence(sentence, wordsPerSentence, shuffledIpsum);
+        this.processSentence(loremParagraph, sentence, sentencesPerParagraph, processedSentence)
+        sentence = [];
+        wordsPerSentence = this.between(8, 15);
+        sentencesPerParagraph = this.between(4, 6);
+        processedSentence = '';
       }
-      finalIpsum.push(loremParagraph.join(' '))
-      finalIpsum = finalIpsum.join('')
-      finalIpsum = finalIpsum.split('<br/>')
-      loremParagraph = [];
-      this.setState({
-        loremIpsum: finalIpsum
-      })
+      loremParagraph.push('<br/>')
     }
+
+    finalIpsum.push(loremParagraph.join(' '))
+    finalIpsum = finalIpsum.join('')
+    finalIpsum = finalIpsum.split('<br/>')
+    loremParagraph = [];
+
+    this.setState({
+      loremIpsum: finalIpsum
+    })
   }
 
   defaultIpsum() {
@@ -101,32 +106,28 @@ class App extends React.Component {
     let sentence = [];
     let processedSentence = '';
     let loremParagraph = [];
-    if (paragraphs > 7) {
-      return null;
-    } else {
-      let finalIpsum = [];
-      for (let i = 0; i < paragraphs; i++) {
-        for (let i = 0; i < sentencesPerParagraph; i++) {
-          this.sentence(sentence, wordsPerSentence, shuffledIpsum);
-          let lastWordInSentence = sentence.pop() + ".";
-          sentence.push(lastWordInSentence)
-          processedSentence = sentence.join(' ');
-          sentence = [];
-          wordsPerSentence = this.between(8, 15);
-          sentencesPerParagraph = this.between(4, 6);
-          loremParagraph.push(processedSentence);
-          processedSentence = '';
-        }
-        loremParagraph.push('<br/>')
+    let finalIpsum = [];
+
+    for (let i = 0; i < paragraphs; i++) {
+      for (let i = 0; i < sentencesPerParagraph; i++) {
+        this.sentence(sentence, wordsPerSentence, shuffledIpsum);
+        this.processSentence(loremParagraph, sentence, sentencesPerParagraph, processedSentence)
+        sentence = [];
+        wordsPerSentence = this.between(8, 15);
+        sentencesPerParagraph = this.between(4, 6);
+        processedSentence = '';
       }
-      finalIpsum.push(loremParagraph.join(' '))
-      finalIpsum = finalIpsum.join('')
-      finalIpsum = finalIpsum.split('<br/>')
-      loremParagraph = [];
-      this.setState({
-        loremIpsum: finalIpsum
-      })
+      loremParagraph.push('<br/>')
     }
+
+    finalIpsum.push(loremParagraph.join(' '))
+    finalIpsum = finalIpsum.join('')
+    finalIpsum = finalIpsum.split('<br/>')
+    loremParagraph = [];
+
+    this.setState({
+      loremIpsum: finalIpsum
+    })
   }
 
   componentDidMount() {
