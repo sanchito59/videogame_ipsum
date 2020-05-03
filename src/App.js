@@ -83,14 +83,12 @@ class App extends React.Component {
     let finalIpsum = [];
     let wordsPerSentence = this.between(7, 13);
     let sentencesPerParagraph = this.between(4, 7);
-    console.log('sentences per 1: ', sentencesPerParagraph)
 
     if (this.state.paragraphNumber > 8) {
       return null;
     } else {
       for (let i = 0; i < this.state.paragraphNumber; i++) {
         sentencesPerParagraph = this.between(4, 7);
-        console.log('sentences per 2: ', sentencesPerParagraph)
         for (let i = 0; i < sentencesPerParagraph; i++) {
           this.sentence(sentence, wordsPerSentence, this.state.shuffledIpsum);
           this.processSentence(loremParagraph, sentence, sentencesPerParagraph, processedSentence)
