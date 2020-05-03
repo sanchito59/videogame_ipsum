@@ -10,6 +10,7 @@ class App extends React.Component {
     this.state = {
       paragraphNumber: 1,
       loremIpsum: ['pizza'],
+      shuffledIpsum: this.shuffle(ipsumText.slice()),
     };
     this.ipsumGeneration = this.ipsumGeneration.bind(this)
     this.handleIpsumGeneration = this.handleIpsumGeneration.bind(this);
@@ -76,59 +77,54 @@ class App extends React.Component {
     e.preventDefault();
     this.clearSelection();
 
-    const paragraphs = this.state.paragraphNumber;
-    let shuffledIpsum = this.shuffle(ipsumText.slice());
-    let wordsPerSentence = this.between(4, 10);
-    let sentencesPerParagraph = this.between(3, 6);
     let sentence = [];
     let processedSentence = '';
     let loremParagraph = [];
     let finalIpsum = [];
-    for (let i = 0; i < paragraphs; i++) {
-      for (let i = 0; i < sentencesPerParagraph; i++) {
-        this.sentence(sentence, wordsPerSentence, shuffledIpsum);
-        this.processSentence(loremParagraph, sentence, sentencesPerParagraph, processedSentence)
-        sentence = [];
-        wordsPerSentence = this.between(8, 15);
-        sentencesPerParagraph = this.between(4, 6);
-        processedSentence = '';
+    let wordsPerSentence = this.between(4, 10);
+    let sentencesPerParagraph = this.between(3, 6);
+
+    if (this.state.paragraphNumber > 9) {
+      return null;
+    } else {
+      for (let i = 0; i < this.state.paragraphNumber; i++) {
+        sentencesPerParagraph = this.between(3, 6);
+        for (let i = 0; i < sentencesPerParagraph; i++) {
+          this.sentence(sentence, wordsPerSentence, this.state.shuffledIpsum);
+          this.processSentence(loremParagraph, sentence, sentencesPerParagraph, processedSentence)
+          sentence = [];
+          wordsPerSentence = this.between(4, 10);
+          processedSentence = '';
+        }
+        loremParagraph.push('<br/>');
       }
-      loremParagraph.push('<br/>')
+
+      let processedLoremIpsum = this.processIpsum(loremParagraph, finalIpsum);
+      this.setState({ loremIpsum: processedLoremIpsum })
+      this.setState({ shuffledIpsum: this.shuffle(ipsumText.slice()) })
     }
-
-    let processedLoremIpsum = this.processIpsum(loremParagraph, finalIpsum);
-
-    this.setState({
-      loremIpsum: processedLoremIpsum
-    })
   }
 
   defaultIpsum() {
-    const paragraphs = this.state.paragraphNumber;
-    let shuffledIpsum = this.shuffle(ipsumText.slice());
-    let wordsPerSentence = this.between(4, 10);
-    let sentencesPerParagraph = this.between(3, 6);
     let sentence = [];
     let processedSentence = '';
     let loremParagraph = [];
     let finalIpsum = [];
+    let wordsPerSentence = this.between(4, 10);
+    let sentencesPerParagraph = this.between(3, 6);
 
-    for (let i = 0; i < paragraphs; i++) {
+    for (let i = 0; i < this.state.paragraphNumber; i++) {
       for (let i = 0; i < sentencesPerParagraph; i++) {
-        this.sentence(sentence, wordsPerSentence, shuffledIpsum);
+        this.sentence(sentence, wordsPerSentence, this.state.shuffledIpsum);
         this.processSentence(loremParagraph, sentence, sentencesPerParagraph, processedSentence)
         sentence = [];
-        wordsPerSentence = this.between(8, 15);
-        sentencesPerParagraph = this.between(4, 6);
+        wordsPerSentence = this.between(4, 10);
         processedSentence = '';
       }
     }
 
     this.processIpsum(loremParagraph, finalIpsum);
-
-    this.setState({
-      loremIpsum: finalIpsum
-    })
+    this.setState({ loremIpsum: finalIpsum })
   }
 
   componentDidMount() {
