@@ -65,7 +65,7 @@ class App extends React.Component {
     let sentence = [];
     let processedSentence = '';
     let loremParagraph = [];
-    if (paragraphs > 7) {
+    if (paragraphs > 9) {
       return null;
     } else {
       let finalIpsum = [];
