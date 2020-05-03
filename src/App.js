@@ -81,19 +81,21 @@ class App extends React.Component {
     let processedSentence = '';
     let loremParagraph = [];
     let finalIpsum = [];
-    let wordsPerSentence = this.between(4, 10);
-    let sentencesPerParagraph = this.between(3, 6);
+    let wordsPerSentence = this.between(7, 13);
+    let sentencesPerParagraph = this.between(4, 7);
+    console.log('sentences per 1: ', sentencesPerParagraph)
 
-    if (this.state.paragraphNumber > 9) {
+    if (this.state.paragraphNumber > 8) {
       return null;
     } else {
       for (let i = 0; i < this.state.paragraphNumber; i++) {
-        sentencesPerParagraph = this.between(3, 6);
+        sentencesPerParagraph = this.between(4, 7);
+        console.log('sentences per 2: ', sentencesPerParagraph)
         for (let i = 0; i < sentencesPerParagraph; i++) {
           this.sentence(sentence, wordsPerSentence, this.state.shuffledIpsum);
           this.processSentence(loremParagraph, sentence, sentencesPerParagraph, processedSentence)
           sentence = [];
-          wordsPerSentence = this.between(4, 10);
+          wordsPerSentence = this.between(7, 13);
           processedSentence = '';
         }
         loremParagraph.push('<br/>');
@@ -110,15 +112,15 @@ class App extends React.Component {
     let processedSentence = '';
     let loremParagraph = [];
     let finalIpsum = [];
-    let wordsPerSentence = this.between(4, 10);
-    let sentencesPerParagraph = this.between(3, 6);
+    let wordsPerSentence = this.between(7, 13);
+    let sentencesPerParagraph = this.between(4, 7);
 
     for (let i = 0; i < this.state.paragraphNumber; i++) {
       for (let i = 0; i < sentencesPerParagraph; i++) {
         this.sentence(sentence, wordsPerSentence, this.state.shuffledIpsum);
         this.processSentence(loremParagraph, sentence, sentencesPerParagraph, processedSentence)
         sentence = [];
-        wordsPerSentence = this.between(4, 10);
+        wordsPerSentence = this.between(7, 13);
         processedSentence = '';
       }
     }
