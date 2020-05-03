@@ -25,7 +25,7 @@ export default function Homepage(props) {
   return (
     <Page>
       <PageTitle>Video Game Ipsum</PageTitle>
-      <SubTitle>gaming themed lorem ipsum generator</SubTitle>
+      <SubTitle>gaming themed placeholder text</SubTitle>
       <IpsumForm
         handleIpsumGeneration={handleIpsumGeneration}
         ipsumGeneration={ipsumGeneration}

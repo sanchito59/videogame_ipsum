@@ -9,11 +9,13 @@ import "./../assets/alert.scss";
 const OuterContainer = styled.div`
   background-color: black;
   border: 2px solid white;
-  width: 50%;
+  width: 55%;
   padding-top: 30px;
   padding-bottom: 10px;
   margin: 60px auto;
   text-align: left;
+  /* outline-offset: 5px;
+  outline: 2px solid white; */
 
   @media screen and (max-width: 768px) {
     width: 90%;
@@ -36,7 +38,7 @@ const ResultsParagraph = styled.p`
   font-family: "Press Start 2P", cursive;
   font-size: 0.8rem;
   width: 90%;
-  margin: 10px auto;
+  margin: 25px auto;
   color: white;
 
   @media screen and (max-width: 768px) {
