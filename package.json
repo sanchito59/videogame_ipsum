@@ -11,12 +11,12 @@
     "@testing-library/user-event": "^7.2.1",
     "antd": "^4.1.5",
     "clipboard": "^2.0.6",
-    "node-sass": "^4.13.1",
+    "node-sass": "^9.0.0",
     "react": "^16.13.1",
     "react-alert": "^7.0.0",
     "react-alert-template-basic": "^1.0.0",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1",
+    "react-scripts": "5.0.1",
     "styled-components": "^5.1.0"
   },
   "scripts": {
